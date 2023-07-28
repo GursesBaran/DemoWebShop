@@ -30,6 +30,7 @@ public class TestCase2_Jazeera extends BaseDriver{
         WebElement unsuccessfulMessage = driver.findElement(By.xpath("//span[.='Login was unsuccessful. Please correct the errors and try again.']"));
 
         Assert.assertTrue(unsuccessfulMessage.getText().contains("unsuccessful"));
+        System.out.println("Jazeera");
 
     }
 }
