@@ -1,10 +1,12 @@
 package Jazeera;
 
+import Utilities.BaseDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import utilities.BaseDriver;
+
+import static Utilities.BaseDriver.driver;
 
 public class TestCase1_Jazeera extends BaseDriver {
     //❖ Login into website with valid credentials.
@@ -15,7 +17,6 @@ public class TestCase1_Jazeera extends BaseDriver {
 
         driver.get("https://demowebshop.tricentis.com/");
 
-//brianlopez@gmail.com          Demo2023
 
         WebElement login = driver.findElement(By.xpath("//a[@class='ico-login']"));
         login.click();
