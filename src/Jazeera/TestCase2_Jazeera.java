@@ -1,11 +1,14 @@
 package Jazeera;
 
+import Utilities.BaseDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class TestCase2_Jazeera extends BaseDriver{
+import static Utilities.BaseDriver.driver;
+
+public class TestCase2_Jazeera extends BaseDriver {
     //❖ Login into website with invalid credentials.
     //❖ Assert that your login is unsuccessful.
 
@@ -16,7 +19,6 @@ public class TestCase2_Jazeera extends BaseDriver{
 
         WebElement login = driver.findElement(By.xpath("//a[@class='ico-login']"));
         login.click();
-
 
         WebElement Email = driver.findElement(By.id("Email"));
         Email.sendKeys("brianlopez2@gmail.com");
@@ -30,7 +32,7 @@ public class TestCase2_Jazeera extends BaseDriver{
         WebElement unsuccessfulMessage = driver.findElement(By.xpath("//span[.='Login was unsuccessful. Please correct the errors and try again.']"));
 
         Assert.assertTrue(unsuccessfulMessage.getText().contains("unsuccessful"));
-        System.out.println("Jazeera");
+
 
     }
 }
